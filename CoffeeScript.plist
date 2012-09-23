@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>commandsArray</key>
+  <array>
+    <!-- Operators -->
+    <dict>
+      <key>beginString</key>
+      <string>[-+*/%&amp;|^=!&lt;&gt;?.:,;]</string>
+      <key>regularExpression</key>
+      <true/>
+    </dict>
+    <dict>
+      <key>beginString</key>
+      <string>(or|and)=</string>
+      <key>regularExpression</key>
+      <true/>
+    </dict>
+  </array>
+  <key>commentsArray</key>
+  <array>
+    <!-- Block comment -->
+    <dict>
+      <key>beginString</key>
+      <string>###</string>
+      <key>endString</key>
+      <string>###</string>
+    </dict>
+    <!-- Comment -->
+    <dict>
+      <key>beginString</key>
+      <string>#.*</string>
+      <key>regularExpression</key>
+      <true/>
+    </dict>
+  </array>
+  <key>completionsArray</key>
+  <array/>
+  <key>extensions</key>
+  <array>
+    <dict>
+      <key>keyString</key>
+      <string>coffee</string>
+    </dict>
+  </array>
+  <key>keywordsArray</key>
+  <array>
+    <!-- Curlies, brackets, and parens -->
+    <dict>
+      <key>beginString</key>
+      <string>[\[\]{}()]</string>
+      <key>regularExpression</key>
+      <true/>
+    </dict>
+    <!-- Function -->
+    <dict>
+      <key>beginString</key>
+      <string>[-=]&gt;</string>
+      <key>regularExpression</key>
+      <true/>
+    </dict>
+    <dict>
+      <key>beginString</key>
+      <string>(?&lt;![0-9A-Za-z$_.])(and|break|by|catch|class|constructor|continue|delete|do|else|extends|finally|for([\t ]+own)?|if|in|instanceof|is|isnt|loop|new|not|of|or|return|super|switch|then|this|throw|try|typeof|unless|until|when|while)(?![0-9A-Za-z$_.])</string>
+      <key>regularExpression</key>
+      <true/>
+    </dict>
+  </array>
+  <key>numbersArray</key>
+  <array>
+    <!-- Integer or floating-point number -->
+    <dict>
+      <key>beginString</key>
+      <string>(?&lt;![0-9A-Za-z$_])[0-9][0-9]*(\.[0-9]+)?(e[-+]?[0-9.]+)?</string>
+      <key>regularExpression</key>
+      <true/>
+    </dict>
+    <!-- Floating-point number with a leading dot -->
+    <dict>
+      <key>beginString</key>
+      <string>(?&lt;![0-9A-Za-z$_.])\.[0-9]+(e[-+]?[0-9.]+)?</string>
+      <key>regularExpression</key>
+      <true/>
+    </dict>
+    <!-- Hex number -->
+    <dict>
+      <key>beginString</key>
+      <string>0x[0-9A-Fa-f]+</string>
+      <key>regularExpression</key>
+      <true/>
+    </dict>
+    <!-- Octal number -->
+    <dict>
+      <key>beginString</key>
+      <string>0o[0-7]+</string>
+      <key>regularExpression</key>
+      <true/>
+    </dict>
+    <!-- Binary number -->
+    <dict>
+      <key>beginString</key>
+      <string>0b[01]+</string>
+      <key>regularExpression</key>
+      <true/>
+    </dict>
+  </array>
+  <key>outlineMenuArray</key>
+  <array>
+    <!-- Function -->
+    <dict>
+      <key>beginString</key>
+      <string>^[\t ]*(\S+)[\t ]*=[\t ]*[^\r\n]*[-=]&gt;</string>
+      <key>keyString</key>
+      <string>$1</string>
+    </dict>
+    <!-- Method -->
+    <dict>
+      <key>beginString</key>
+      <string>^[\t ]+['"](\S*?)['"]:[^=\r\n]*[-=]&gt;</string>
+      <key>ignoreCase</key>
+      <false/>
+      <key>italic</key>
+      <true/>
+      <key>keyString</key>
+      <string>$1</string>
+    </dict>
+    <!-- Class -->
+    <dict>
+      <key>beginString</key>
+      <string>^class[\t ]+(\S+)</string>
+      <key>bold</key>
+      <true/>
+      <key>keyString</key>
+      <string>$1</string>
+    </dict>
+  </array>
+  <key>stringsArray</key>
+  <array>
+    <dict>
+      <key>beginString</key>
+      <string>'</string>
+      <key>endString</key>
+      <string>'</string>
+    </dict>
+    <dict>
+      <key>beginString</key>
+      <string>"</string>
+      <key>endString</key>
+      <string>"</string>
+    </dict>
+    <!-- Block string -->
+    <dict>
+      <key>beginString</key>
+      <string>'''</string>
+      <key>endString</key>
+      <string>'''</string>
+    </dict>
+    <dict>
+      <key>beginString</key>
+      <string>"""</string>
+      <key>endString</key>
+      <string>"""</string>
+    </dict>
+    <!-- Heregex -->
+    <dict>
+      <key>beginString</key>
+      <string>///</string>
+      <key>endString</key>
+      <string>///</string>
+    </dict>
+    <!-- Embedded JavaScript -->
+    <dict>
+      <key>beginString</key>
+      <string>`</string>
+      <key>endString</key>
+      <string>`</string>
+    </dict>
+  </array>
+  <key>styleName</key>
+  <string>CoffeeScript</string>
+  <key>valuesArray</key>
+  <array>
+    <dict>
+      <key>beginString</key>
+      <string>(?&lt;![0-9A-Za-z$_.])(true|false|yes|no|on|off|NaN|Infinity|null|undefined)(?![0-9A-Za-z$_.])</string>
+      <key>regularExpression</key>
+      <true/>
+    </dict>
+    <!-- @property -->
+    <dict>
+      <key>beginString</key>
+      <string>@([A-Za-z$_][0-9A-Za-z$_]*)?</string>
+      <key>regularExpression</key>
+      <true/>
+    </dict>
+    <dict>
+      <key>beginString</key>
+      <string>this</string>
+    </dict>
+  </array>
+</dict>
+</plist>
