@@ -7,7 +7,7 @@
     <!-- Operators -->
     <dict>
       <key>beginString</key>
-      <string>[-+*/%&amp;|^=!&lt;&gt;?.:,;]</string>
+      <string>[-+*/%&amp;|^=!~&lt;&gt;?.:,;]</string>
       <key>regularExpression</key>
       <true/>
     </dict>
