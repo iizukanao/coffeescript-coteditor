@@ -5,7 +5,7 @@ CoffeeScript support for CotEditor
 
 CotEditor用のCoffeeScriptシンタックス定義ファイルです。
 
-![Screenshot](https://raw.github.com/gist/3772233/screenshot.png)
+![Screenshot](https://raw.github.com/iizukanao/coffeescript-coteditor/master/screenshot.png)
 
 ## インストール
 
